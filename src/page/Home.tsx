@@ -13,7 +13,7 @@ const Home = () => {
 
 	return (
 		<>
-			<div className="flex flex-row items-center justify-center">
+			<div className="flex flex-row items-center justify-center bg-primary-600">
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
 				</a>
@@ -21,10 +21,10 @@ const Home = () => {
 					<img src={reactLogo} className="logo react" alt="React logo" />
 				</a>
 			</div>
-			<h1>Vite + React</h1>
+			<h1 className="text-neutral-light font-sans font-bold">Vite + React</h1>
 			<div className="card">
 				<Button onClick={() => increase()}>count is {count}</Button>
-				<p>Check console log for demo fetch api data response</p>
+				<p className="font-sans">Check console log for demo fetch api data response</p>
 			</div>
 			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
 		</>
