@@ -22,19 +22,19 @@ const Home: React.FC<HomeProps> = () => {
 			<div>
 				<Header scrollFunc={executeScroll} />
 			</div>
-			<div data-aos='fade-up' data-aos-duration='1000' data-aos-delay='50' >
+			<div data-aos='fade-down' data-aos-duration='1000' data-aos-delay='50' >
 				<Introduction />
 			</div>
 			<div data-aos='fade-left' data-aos-duration='1000'>
 				<Driver />
 			</div>
-			<div data-aos='fade-right' data-aos-duration='1000' data-aos-delay='50'>
+			<div data-aos='fade-right' data-aos-duration='2000' data-aos-delay='50'>
 				<ChatBox />
 			</div>
-			<div data-aos='fade-up-right' data-aos-duration='1000' data-aos-delay='50'>
+			<div data-aos='fade-up-right' data-aos-duration='2000' data-aos-delay='50'>
 				<Product />
 			</div>
-			<div data-aos='fade-right' data-aos-duration='1000' data-aos-delay='50'>
+			<div data-aos='fade-right' data-aos-duration='2000' data-aos-delay='50'>
 				<Blog />
 			</div>
 			<div ref={registerRef}>
