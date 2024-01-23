@@ -65,7 +65,7 @@ function Introduction({ }: IntroductionProps): JSX.Element {
             </div>
             <div className="absolute top-0 right-10">
                 <img
-                    className="h-650 animate-spinV3"
+                    className="h-650"
                     src={bot}
                     alt=""
                 />
