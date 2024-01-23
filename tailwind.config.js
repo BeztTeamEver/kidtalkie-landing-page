@@ -6,6 +6,23 @@ export default {
 			fontFamily: {
 				sans: ['"Nunito"', 'sans-serif'],
 			},
+			fontSize: {
+				lg1: ['18px', '24.55px'],
+				lg2: ['32px', '49.6px'],
+				lg3: ['20px', '30px'],
+				lg4: ['36.4px', '61.88px'],
+				lg5: ['22px', '37.4px'],
+				lg6: ['17px', '24.65px'],
+				lg7: ['15px', '21.75px'],
+			},
+			height: {
+				650: '41.3rem',
+				675: '38rem',
+			},
+			spacing: {
+				55: '55%',
+				70: '72%',
+			},
 			colors: {
 				orange: {
 					50: '#FFFBF5',
@@ -67,12 +84,43 @@ export default {
 				green: {
 					main: '#00FB19',
 					light: '#DAFFDA',
-					dark: '##016A01',
+					dark: '#016A01',
+					fade: '#ffedf1',
 				},
 				red: {
 					main: '#F03C3C',
 					light: '#FFDADA',
 					dark: '#6A0101',
+				},
+			},
+			animation: {
+				pulseV2: 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				spinV2: 'spinV2 3s linear infinite',
+				spinV3: 'spinV3 1s linear infinite',
+				typing:
+					'typing 5s steps(3000, end) infinite, blinkCaret 1.5s step-end infinite, pause 4000ms infinite',
+			},
+			keyframes: {
+				spinV2: {
+					'0%, 100%': { transform: 'rotate(-0.5deg)' },
+					'50%': { transform: 'rotate(0.5deg)' },
+				},
+				spinV3: {
+					'0%, 100%': { transform: 'rotate(-1deg)' },
+					'50%': { transform: 'rotate(1deg)' },
+				},
+				typing: {
+					from: { width: '0' },
+					to: { width: '100%' },
+				},
+				blinkCaret: {
+					from: { borderColor: 'transparent' },
+					to: { borderColor: 'transparent' },
+					'50%': { borderColor: 'black' },
+				},
+				pause: {
+					'0%': { width: '0' },
+					'100%': { width: '100%' },
 				},
 			},
 		},
