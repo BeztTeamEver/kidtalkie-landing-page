@@ -32,7 +32,7 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                         <div className="my-4">
                             <label htmlFor="Name" className="block font-semibold text-base leading-6 text-gray-900">Tên người đăng ký</label>
                             <div className="flex border rounded-full shadow-sm mt-1">
-                                <input type="text" id="name" className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent py-1.5 p-3" required />
+                                <input type="text" id="name" className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent py-1.5 p-3" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required />
                             </div>
                             <label htmlFor="Email" className="block font-semibold text-base leading-6 text-gray-900">Email</label>
                             <div className="flex border rounded-full shadow-sm mt-1">
