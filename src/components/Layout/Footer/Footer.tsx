@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import Logo from "../../../assets/logoWhite.svg";
-import { IconBrandFacebook, IconBrandYoutube, IconBrandLinkedin, IconMailOpened } from '@tabler/icons-react';
+import { IconBrandFacebook, IconBrandInstagram, IconMailOpened } from '@tabler/icons-react';
 interface LinkItem {
     title: string;
     items: { label: string; href: string }[];
@@ -9,10 +10,10 @@ const Links: LinkItem[] = [
     {
         title: "Menu",
         items: [
-            { label: "Trang chủ", href: "/home" },
-            { label: "Blog", href: "/blog" },
-            { label: "Về KidTalkie", href: "/about" },
-            { label: "Tuyển dụng", href: "/#" }
+            { label: "Trang chủ", href: "/" },
+            { label: "Blog", href: "/updating" },
+            { label: "Về KidTalkie", href: "/updating" },
+            { label: "Tuyển dụng", href: "/updating" }
         ],
     },
     {
@@ -49,8 +50,7 @@ function Footer({ }: FooterProps): JSX.Element {
                             <div className="flex flex-row">
                                 <p className="font-sans font-medium text-primary-50" >Theo dõi chúng tôi tại:</p>
                                 <a href="https://www.facebook.com/kidtalkie" target="_blank" className="ml-2"><IconBrandFacebook className="text-white" /></a>
-                                <a href="#" className="ml-2"><IconBrandLinkedin className="text-white" /></a>
-                                <a href="#" className="ml-2"><IconBrandYoutube className="text-white" /></a>
+                                <a href="https://www.instagram.com/bingo_kidtalkie/?fbclid=IwAR1Nr3zhpqZXQmvWPjrKJK1TMTSFcf2CLAsDs0lGTMXcw-LMnIFH02alIvA" target="_blank" className="ml-2"><IconBrandInstagram className="text-white" /></a>
                             </div>
                         </div>
                     </div>
@@ -59,13 +59,13 @@ function Footer({ }: FooterProps): JSX.Element {
                             <p className="font-extrabold text-white dark:text-white text-lg6">{title}</p>
                             <div className="flex flex-col items-start mt-5 space-y-2">
                                 {items.map(({ label, href }) => (
-                                    <a
+                                    <Link to={href}
                                         key={label}
-                                        href={href}
+                                        // href={href}
                                         className="text-white font-semibold text-lg7 dark:text-gray-300 dark:hover:text-blue-400  hover:cursor-pointer hover:text-blue-500"
                                     >
                                         {label}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

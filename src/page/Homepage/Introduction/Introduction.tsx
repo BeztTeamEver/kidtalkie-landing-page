@@ -12,7 +12,7 @@ import IOS from "../../../assets/IOS.svg";
 interface IntroductionProps { }
 function Introduction({ }: IntroductionProps): JSX.Element {
     return (
-        <div className="flex justify-between mx-auto p-6 h-fit">
+        <div className="flex justify-between mx-auto p-10 h-fit">
             <div className="flex flex-col">
                 <h1 className="font-sans font-black text-lg4 text-orange-600">KHÁM PHÁ AN TOÀN, HỌC HỎI MỖI NGÀY</h1>
                 <p className="font-sans font-normal text-lg5  text-orange-600 ">Ứng Dụng Giải Trí Giáo Dục Dành Cho Tâm Hồn Nhỏ!</p>
