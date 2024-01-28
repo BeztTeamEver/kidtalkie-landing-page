@@ -5,7 +5,7 @@ import assign from 'lodash/assign';
 
 const axiosInstance: AxiosInstance = axios.create({
 	baseURL: API_URL,
-	timeout: 1000,
+	timeout: 10000,
 	headers: { 'X-Custom-Header': 'foobar' },
 });
 
@@ -23,17 +23,15 @@ export class BaseHttp {
 	}
 
 	public post({ headers, params, url, data }: IRequest) {
-		return axiosInstance.post(url, {
+		return axiosInstance.post(url,data, {
 			params: assign({}, params),
 			headers: assign({}, headers),
-			data: assign({}, data),
 		});
 	}
 
 	public put({ headers, params, url, data }: IRequest) {
-		return axiosInstance.put(url, {
+		return axiosInstance.put(url,data, {
 			params: assign({}, params),
-			data: assign({}, data),
 			headers: assign({}, headers),
 		});
 	}

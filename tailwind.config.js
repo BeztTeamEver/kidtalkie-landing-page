@@ -5,6 +5,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['"Nunito"', 'sans-serif'],
+				inter: ['"Inter"', 'sans-serif'],
 			},
 			fontSize: {
 				lg1: ['18px', '24.55px'],
@@ -14,6 +15,8 @@ export default {
 				lg5: ['22px', '37.4px'],
 				lg6: ['17px', '24.65px'],
 				lg7: ['15px', '21.75px'],
+				lg8: ['29.98px', '29.98px'],
+				lg9: ['44px', '46.2px'],
 			},
 			height: {
 				650: '41.3rem',
@@ -22,6 +25,9 @@ export default {
 			spacing: {
 				55: '55%',
 				70: '72%',
+			},
+			borderRadius: {
+				lg1: '32px',
 			},
 			colors: {
 				orange: {
@@ -99,6 +105,14 @@ export default {
 				spinV3: 'spinV3 1s linear infinite',
 				typing:
 					'typing 5s steps(3000, end) infinite, blinkCaret 1.5s step-end infinite, pause 4000ms infinite',
+				u: 'bounceV2 1s infinite',
+				p: 'bounceV2 2.5s infinite',
+				d: 'bounceV2 3.5s infinite',
+				a: 'bounceV2 5s infinite',
+				t: 'bounceV2 6.5s infinite',
+				i: 'bounceV2 8s infinite',
+				n: 'bounceV2 9.5s infinite',
+				g: 'bounceV2 11s infinite',
 			},
 			keyframes: {
 				spinV2: {
@@ -121,6 +135,16 @@ export default {
 				pause: {
 					'0%': { width: '0' },
 					'100%': { width: '100%' },
+				},
+				bounceV2: {
+					'0%, 100%': {
+						transform: 'translateY(-25%)',
+						'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+					},
+					'50%': {
+						transform: 'translateY(25%)',
+						'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
+					},
 				},
 			},
 		},

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { IconSparkles, IconX, IconMenu2 } from '@tabler/icons-react';
 import Logo from '../../../assets/logoBasic.svg';
+import { Link } from 'react-router-dom';
 const navigation = [
-  { name: 'Trang Chủ', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Về KidTalkie', href: '#' },
-  { name: 'Chi phí', href: '#' },
+  { name: 'Trang Chủ', href: '/' },
+  { name: 'Blog', href: '/updating' },
+  { name: 'Về KidTalkie', href: '/updating' },
+  { name: 'Chi phí', href: '/cost' },
 ];
 
 interface HeaderProps {
-  scrollFunc: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ scrollFunc }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -22,21 +22,21 @@ const Header: React.FC<HeaderProps> = ({ scrollFunc }) => {
         className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global">
         <div className="flex lg:flex-1 items-center lg:justify-start">
-          <a href="#" className="-m-1.5 p-1.5 flex items-center">
+          <Link to="/" className="-m-1.5 p-1.5 flex items-center">
             <img className="h-8 w-auto" src={Logo} alt="" />
             <span className="ml-2 text-primary-500 font-sans font-extrabold text-lg1">
               KidTalkie
             </span>
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-center">
           {navigation.map((item, index) => (
-            <a
-              href={item.href}
+            <Link to={item.href}
+              // href={item.href}
               key={index}
               className="flex-auto text-lg1 font-semibold text-center">
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex lg:hidden">
@@ -48,13 +48,12 @@ const Header: React.FC<HeaderProps> = ({ scrollFunc }) => {
           </button>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <button
-            className="flex items-center bg-orange-500 hover:bg-orange-300 text-white font-bold py-2 px-4 rounded-full font-sans text-sm"
-            onClick={scrollFunc}>
+          <Link to="/incentives"
+            className="flex items-center bg-orange-500 hover:bg-orange-300 text-white font-bold py-2 px-4 rounded-full font-sans text-sm">
             <IconSparkles className="size-6" />
             <span className="ml-2">Đăng ký trước ngay</span>
             <IconSparkles className="size-6 ml-2" />
-          </button>
+          </Link>
         </div>
       </nav>
       <div className={`fixed inset-0 z-10 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
