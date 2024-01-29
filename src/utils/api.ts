@@ -5,7 +5,7 @@ import assign from 'lodash/assign';
 
 const axiosInstance: AxiosInstance = axios.create({
 	baseURL: API_URL,
-	timeout: 10000,
+	timeout: 3000,
 	headers: { 'X-Custom-Header': 'foobar' },
 });
 
