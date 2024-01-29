@@ -5,7 +5,8 @@ export const ProvincesAPI = {
         return await baseHttp.get({
             headers: {},
             params: {},
-            url: '/landing-page/provinces',
+            // url: '/landing-page/provinces', run in local
+            url: '/api/landing-page/provinces',
         });
     },
 };
