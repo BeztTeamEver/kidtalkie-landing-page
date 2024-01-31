@@ -3,7 +3,7 @@ import TableCost from "../../assets/costTable.svg";
 interface CostProps { }
 export default function Cost({ }: CostProps): JSX.Element {
     return (
-        <div className="flex flex-col ">
+        <div className="flex flex-col px-32">
             <div className="flex flex-row justify-center gap-3">
                 <IconNorthStar size={50} className="text-primary-600" />
                 <span className="flex items-center font-sans font-extrabold text-lg8 text-center uppercase text-primary-600">
@@ -11,7 +11,7 @@ export default function Cost({ }: CostProps): JSX.Element {
                 </span>
                 <IconNorthStar size={50} className="text-primary-600" />
             </div>
-            <div className='flex flex-row gap-10 p-16'>
+            <div className='flex flex-row gap-10 p-4'>
                 <div className='flex flex-col border rounded-lg1 basis-1/3 p-10 justify-center text-center items-center shadow-2xl'>
                     <h1 className='font-inter font-semibold text-lg1 text-neutral-700'>Gói trải nghiệm</h1>
                     <h1 className='font-inter font-semibold text-lg9 text-neutral-800 mt-4'>0đ</h1>

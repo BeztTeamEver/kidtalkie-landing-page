@@ -10,7 +10,7 @@ import Clothes6 from '../../../assets/Clothes/C6.svg';
 interface ChatboxProps { }
 function ChatBox({ }: ChatboxProps): JSX.Element {
     return (
-        <div className="mt-10">
+        <div className="mt-10 mx-20">
             <h1 className="font-sans font-extrabold text-lg2 text-orange-600 text-center">
                 NGƯỜI BẠN ĐỒNG HÀNH CÙNG TRẺ
             </h1>

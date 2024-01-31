@@ -48,9 +48,9 @@ function Incentives({ }: IncentivesProps): JSX.Element {
             .catch((error) => { console.log(error); toast.error("Đăng ký không thành công, vui lòng kiểm tra lại!") });
     };
     return (
-        <div className="p-6">
+        <div style={{ paddingLeft: "12%", paddingRight: "12%" }}>
             <h1 className="font-sans font-extrabold text-lg2 text-orange-600 text-center">
-                ƯU Đãi ĐĂNG KÝ TRƯỚC
+                ƯU ĐÃI ĐĂNG KÝ TRƯỚC
             </h1>
             <div className="flex flex-row p-2">
                 <div className="border flex flex-col justify-between rounded-lg shadow-xl p-4 lg:flex-1 font-sans font-normal text-lg3 mr-20">
@@ -83,14 +83,14 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                         <div className="my-4">
                             <label
                                 htmlFor="Name"
-                                className="block font-semibold text-base leading-6 text-gray-900">
+                                className="block font-semibold text-base leading-6 text-gray-900 mb-2">
                                 Tên người đăng ký
                             </label>
                             <div className="flex border rounded-full shadow-sm">
                                 <input
                                     type="text"
                                     id="fullName"
-                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent py-1.5 p-3"
+                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
                                     required
                                     pattern="^[a-zA-ZÀ-ỹ\s]*$"
                                     value={input.fullName}
@@ -99,14 +99,14 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                             </div>
                             <label
                                 htmlFor="Email"
-                                className="block font-semibold text-base leading-6 text-gray-900 mt-1">
+                                className="block font-semibold text-base leading-6 text-gray-900 my-2">
                                 Địa chỉ Email
                             </label>
                             <div className="flex border rounded-full shadow-sm">
                                 <input
                                     type="email"
                                     id="email"
-                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent py-1.5 p-3"
+                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
                                     required
                                     value={input.email}
                                     onChange={(e) => setInput({ ...input, email: e.target.value })}
@@ -114,12 +114,12 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                             </div>
                             <label
                                 htmlFor="Province"
-                                className="block font-semibold text-base leading-6 text-gray-900 mt-1">
+                                className="block font-semibold text-base leading-6 text-gray-900 my-2">
                                 Tỉnh
                             </label>
                             <div ref={ref} className="relative border rounded-full shadow-sm">
                                 <div
-                                    className={`peer flex-1 border text-base shadow-sm bg-transparent py-1.5 p-3 flex justify-between items-center rounded-full ${!selected && 'text-gray-700'}`}
+                                    className={`peer flex-1 border text-base shadow-sm bg-transparent px-5 py-3 flex justify-between items-center rounded-full ${!selected && 'text-gray-700'}`}
                                     onClick={() => setOpen(!open)}>
                                     {selected
                                         ? selected?.length > 25
@@ -162,14 +162,14 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                             </div>
                             <label
                                 htmlFor="referralCodeOther"
-                                className="block font-semibold text-base leading-6 text-gray-900 mt-1">
+                                className="block font-semibold text-base leading-6 text-gray-900 my-2">
                                 Mã giới thiệu
                             </label>
                             <div className="flex border rounded-full shadow-sm">
                                 <input
                                     type="text"
                                     id="referralCodeOther"
-                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent py-1.5 p-3"
+                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
                                     value={input.referralCodeOther}
                                     onChange={(e) => setInput({ ...input, referralCodeOther: e.target.value })}
                                 />

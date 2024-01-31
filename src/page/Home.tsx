@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = () => {
 			{/* <div>
 				<Header />
 			</div> */}
-			<div data-aos='fade-down' data-aos-duration='1000' data-aos-delay='50' >
+			<div style={{ paddingLeft: "2%", paddingRight: "5%" }}>
 				<Introduction />
 			</div>
 			<div data-aos='fade-left' data-aos-duration='2000' data-aos-delay='50' >
@@ -26,18 +26,16 @@ const Home: React.FC<HomeProps> = () => {
 			<div data-aos='fade-right' data-aos-duration='2000' data-aos-delay='50'>
 				<ChatBox />
 			</div>
-			<div data-aos='fade-up-right' data-aos-duration='2000' data-aos-delay='50'>
+			<div data-aos='fade-up-right' data-aos-duration='2000' data-aos-delay='50' >
 				<Product />
 			</div>
 			<div data-aos='fade-right' data-aos-duration='2000' data-aos-delay='50'>
 				<Blog />
 			</div>
-			<div>
+			<div className='mb-16'>
 				<Incentives />
 			</div>
-			{/* <div>
-				<Footer />
-			</div> */}
+
 		</div>
 	);
 };
