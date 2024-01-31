@@ -31,7 +31,7 @@ interface FooterProps { }
 
 function Footer({ }: FooterProps): JSX.Element {
     return (
-        <footer className="bg-orange-700 font-sans dark:bg-gray-900">
+        <footer className="bg-orange-500 font-sans dark:bg-gray-900">
             <div className="container px-6 pt-12 mx-auto max-w-full">
                 <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-5">
                     <div className="sm:col-span-2">
