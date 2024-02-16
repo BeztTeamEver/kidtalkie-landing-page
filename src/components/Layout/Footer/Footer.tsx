@@ -19,8 +19,8 @@ const Links: LinkItem[] = [
     {
         title: "Điều Khoản",
         items: [
-            { label: "Chính sách bảo mật", href: "/privacy" },
-            { label: "Điều khoản dịch vụ", href: "/terms" },
+            { label: "Chính sách bảo mật", href: "/updating" },
+            { label: "Điều khoản dịch vụ", href: "/updating" },
         ],
     },
 ];

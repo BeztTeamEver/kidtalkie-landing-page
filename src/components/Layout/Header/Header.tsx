@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = () => {
             <Link to={item.href}
               // href={item.href}
               key={index}
-              className="flex-auto text-lg1 font-semibold text-center">
+              className="flex-auto text-lg1 font-semibold text-center hover:text-gray-500">
               {item.name}
             </Link>
           ))}
