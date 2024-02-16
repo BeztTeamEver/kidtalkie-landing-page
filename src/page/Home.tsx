@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = () => {
 			{/* <div>
 				<Header />
 			</div> */}
-			<div style={{ paddingLeft: "2%", paddingRight: "5%" }}>
+			<div data-aos='fade-down' data-aos-duration='2000' data-aos-delay='50' style={{ paddingLeft: "2%", paddingRight: "5%" }}>
 				<Introduction />
 			</div>
 			<div data-aos='fade-left' data-aos-duration='2000' data-aos-delay='50' >

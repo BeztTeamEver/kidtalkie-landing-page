@@ -11,7 +11,8 @@ export const RegisterAPI = {
 		return await baseHttp.post({
 			headers: {},
 			params: {},
-			// url: '/landing-page/register-early', run in local
+			// run in local
+			// url: '/landing-page/register-early',
 			url: '/api/landing-page/register-early',
 			data: { fullName, email, province, referralCodeOther },
 		});
