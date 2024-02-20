@@ -7,7 +7,7 @@ interface DriverProps { }
 const Driver: React.FC<DriverProps> = () => {
     return (
         <Swiper
-            spaceBetween={10}
+            spaceBetween={100}
             autoplay={{
                 delay: 500,
                 disableOnInteraction: false,

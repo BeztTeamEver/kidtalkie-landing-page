@@ -57,7 +57,7 @@ const Header: React.FC<HeaderProps> = () => {
         </div>
       </nav>
       <div className={`fixed inset-0 z-10 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
-        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-md sm:ring-1 sm:ring-gray-900/10 overflow-hidden">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5 flex items-center">
               <img className="w-auto" src={Logo} alt="" />
@@ -83,11 +83,11 @@ const Header: React.FC<HeaderProps> = () => {
               </a>
             ))}
             <div className="py-6">
-              <button className="flex items-center bg-orange-500 hover:bg-orange-300 text-white font-bold py-2 px-4 rounded-full font-sans leading-3">
+              <Link to="/incentives" className="flex items-center justify-center bg-orange-500 hover:bg-orange-300 text-white font-bold py-2 px-4 rounded-full font-sans leading-3">
                 <IconSparkles className="size-6" />
                 <span className="ml-2">Đăng ký trước ngay</span>
                 <IconSparkles className="size-6 ml-2" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
