@@ -19,6 +19,7 @@ function Incentives({ }: IncentivesProps): JSX.Element {
     const [inputValue, setInputValue] = useState('');
     const [selected, setSelected] = useState('');
     const [open, setOpen] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
     const [input, setInput] = useState({
         fullName: '',
         email: '',
@@ -34,6 +35,7 @@ function Incentives({ }: IncentivesProps): JSX.Element {
     }, []);
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setSubmitting(true);
         RegisterAPI.register(input.fullName, input.email, selected, input.referralCodeOther)
             .then((res) => {
                 console.log(res);
@@ -43,17 +45,20 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                     referralCodeOther: '',
                 });
                 setSelected('');
-                toast.success('Đăng ký thành công');
+                toast.success(<div className='w-full font-semibold text-base text-orange-600 p-1'>Bạn đã đăng ký thành công.<br /><span className='font-extralight text-xs text-black'>Hệ thống đã ghi nhận thông tin của bạn. Vui lòng kiểm tra email để nhận mã giới thiệu và các ưu đãi từ KidTalkie</span></div>);
             })
-            .catch((error) => { console.log(error); toast.error("Đăng ký không thành công, vui lòng kiểm tra lại!") });
+            .catch((error) => { console.log(error); toast.error("Đăng ký không thành công, vui lòng kiểm tra lại!") })
+            .finally(() => {
+                setSubmitting(false);
+            });
     };
     return (
-        <div style={{ paddingLeft: "12%", paddingRight: "12%" }}>
+        <div className='px-24 xl:px-44'>
             <h1 className="font-sans font-extrabold text-lg2 text-orange-600 text-center">
                 ƯU ĐÃI ĐĂNG KÝ TRƯỚC
             </h1>
-            <div className="flex flex-row p-2">
-                <div className="border flex flex-col justify-between rounded-lg shadow-xl p-4 lg:flex-1 font-sans font-normal text-lg3 mr-20">
+            <div className="flex flex-col lg:flex-row">
+                <div className="border mb-5 flex flex-col justify-between rounded-lg shadow-xl p-4 lg:flex-1 font-sans font-normal lg:text-lg3 lg:mr-20">
                     <div className="p-4">
                         🚀 Chào mừng bạn đến với hành trình mới cùng KidTalkie! Chỉ cần là một trong 10 người
                         đầu tiên đăng ký, bạn sẽ được trải nghiệm miễn phí tất cả tính năng trong vòng 3 tháng
@@ -179,8 +184,21 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                 <img src={SmallTop} className="absolute top-8 left-2" alt="" />
                                 <button
                                     type="submit"
-                                    className="w-full bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded-full font-sans shadow-md shadow-orange-600 mt-4 text-lg">
-                                    Nhanh tay đăng ký trước ngay
+                                    className={`w-full bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded-full font-sans shadow-md shadow-orange-600 mt-4 text-lg ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                >
+                                    <div className="flex items-center justify-center">
+                                        {submitting ? (
+                                            <div className="flex items-center">
+                                                <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.418 3.582 8 8 8v-4c-1.61 0-3.098-.478-4.355-1.291z"></path>
+                                                </svg>
+                                                <span>Đang xử lý...</span>
+                                            </div>
+                                        ) : (
+                                            'Nhanh tay đăng ký trước ngay'
+                                        )}
+                                    </div>
                                 </button>
                                 <img src={BigBot} className="absolute top-8 right-1" alt="" />
                                 <img src={SmallBot} className="absolute top-12 right-4" alt="" />

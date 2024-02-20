@@ -10,20 +10,20 @@ import Clothes6 from '../../../assets/Clothes/C6.svg';
 interface ChatboxProps { }
 function ChatBox({ }: ChatboxProps): JSX.Element {
     return (
-        <div className="mt-10 mx-20">
-            <h1 className="font-sans font-extrabold text-lg2 text-orange-600 text-center">
+        <div className="mt-10 mx-24 xl:mx-20">
+            <h1 className="font-sans font-extrabold text-xl md:text-lg2 text-orange-600 text-center">
                 NGƯỜI BẠN ĐỒNG HÀNH CÙNG TRẺ
             </h1>
-            <div className="flex flex-row mt-10 p-6 gap-4">
-                <div className="basis-1/3 mt-2  ">
-                    <div className="grid border w-2/3 p-4 rounded-full ml-auto shadow-md">
-                        <p className="truncate border-r-2 border-solid border-black tracking-widest animate-typing">
+            <div className="flex flex-col md:flex-row mt-10 p-6 gap-4">
+                <div className="basis-1/3 mt-2">
+                    <div className="grid border w-4/5 sm:w-3/5 md:w-full lg:w-full xl:w-11/12 p-4 rounded-full ml-auto shadow-md">
+                        <p className="truncate font-bold border-r-2 border-solid border-black tracking-widest animate-typing md:text-lg10 lg:text-sm xl:text-lg7">
                             1. Botchat AI trả lời các câu hỏi
                         </p>
                     </div>
                     <img className="ml-4 mt-4 p-4 w-11/12 " src={Box}></img>
-                    <div className="grid border w-55 mr-3 mt-4 p-4 rounded-full shadow-md ml-auto">
-                        <p className="truncate border-r-2 border-solid border-black tracking-widest animate-typing">
+                    <div className="grid border w-3/4 sm:w-1/2 md:w-4/5 lg:w-3/4 xl:w-3/4 mr-3 mt-4 p-4 rounded-full shadow-md ml-auto">
+                        <p className="truncate font-bold border-r-2 border-solid border-black tracking-widest animate-typing md:text-lg10 lg:text-sm xl:text-lg7">
                             3. Xem lại lịch sử câu hỏi
                         </p>
                     </div>
@@ -33,8 +33,8 @@ function ChatBox({ }: ChatboxProps): JSX.Element {
                     <img className="h-28 animate-pulseV2" src={Record} alt="" />
                 </div>
                 <div className="basis-1/3">
-                    <div className="grid border w-7/12 p-4 rounded-full mr-auto shadow-md ">
-                        <p className="truncate border-r-2 border-solid border-black tracking-widest animate-typing">
+                    <div className="grid border w-4/5 sm:w-1/2 md:w-full lg:w-11/12 xl:w-4/5 p-4 rounded-full mr-auto shadow-md ">
+                        <p className="truncate font-bold border-r-2 border-solid border-black tracking-widest animate-typing md:text-lg10 lg:text-sm xl:text-lg7">
                             2. Sử dụng giọng nói để hỏi
                         </p>
                     </div>
@@ -46,8 +46,8 @@ function ChatBox({ }: ChatboxProps): JSX.Element {
                         <img className="w-full hover:animate-spinV3" src={Clothes5} alt="" />
                         <img className="w-full hover:animate-spinV3" src={Clothes6} alt="" />
                     </div>
-                    <div className="grid border w-70 mt-6 p-4 rounded-full mr-auto shadow-md ml-4">
-                        <p className="truncate border-r-2 border-solid border-black tracking-widest animate-typing">
+                    <div className="grid border w-11/12 sm:w-3/5 md:w-full lg:w-11/12 xl:w-4/5 mt-6 p-4 rounded-full mr-auto shadow-md ml-4">
+                        <p className="truncate font-bold border-r-2 border-solid border-black tracking-widest animate-typing md:text-lg10 lg:text-sm xl:text-lg7">
                             4. Thỏa sức thời trang cùng Bí Ngô
                         </p>
                     </div>

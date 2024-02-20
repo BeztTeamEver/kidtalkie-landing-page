@@ -13,33 +13,31 @@ import IOS from '../../../assets/IOS.svg';
 function Introduction(): JSX.Element {
     return (
         <div className="flex flex-col md:flex-row-1 sm:flex-row-1 lg:flex-row-1 xl:flex-row-1 md:justify-between mx-auto p-10">
-            <div className="flex flex-col md:w-1/2 order-1 md:order-2">
-                <h1 className="font-black text-lg4 text-orange-600">
+            <div className="flex flex-col order-1 sm:order-2 w-full">
+                <div className="font-black text-orange-600 w-full text-xs sm:text-base md:text-xl lg:text-2xl lg:w-3/5 xl:text-lg4">
                     KHÁM PHÁ AN TOÀN, HỌC HỎI MỖI NGÀY
-                </h1>
-                <p className="font-normal text-lg5 text-orange-600">
+                </div>
+                <p className="font-normal text-orange-600 text-lg10 sm:text-xs lg:text-xl xl:text-lg5">
                     Ứng Dụng Giải Trí Giáo Dục Dành Cho Tâm Hồn Nhỏ!
                 </p>
-                <div className="flex flex-col md:flex-row md:gap-1 mt-3">
-                    <img className="w-full" src={img1} alt="" />
-                    <img className="w-full" src={img2} alt="" />
-                    <img className="w-full" src={img3} alt="" />
-                    <img className="w-full" src={img4} alt="" />
+                <div className="flex flex-row sm:flex-row sm:gap-1 mt-3 sm:w-1/2">
+                    <img className="w-1/4 sm:w-1/4" src={img1} alt="" />
+                    <img className="w-1/4 sm:w-1/4" src={img2} alt="" />
+                    <img className="w-1/4 sm:w-1/4" src={img3} alt="" />
+                    <img className="w-1/4 sm:w-1/4" src={img4} alt="" />
                 </div>
-                <div className="flex flex-col md:flex-row md:gap-1 mt-3">
-                    <img className="w-full" src={img5} alt="" />
-                    <img className="w-full" src={img6} alt="" />
-                    <img className="w-full" src={img7} alt="" />
-                    <img className="w-full" src={img8} alt="" />
+                <div className="flex flex-row sm:flex-row sm:gap-1 mt-3 sm:w-1/2">
+                    <img className="w-1/4 sm:w-1/4" src={img5} alt="" />
+                    <img className="w-1/4 sm:w-1/4" src={img6} alt="" />
+                    <img className="w-1/4 sm:w-1/4" src={img7} alt="" />
+                    <img className="w-1/4 sm:w-1/4" src={img8} alt="" />
                 </div>
                 <div className="flex gap-4 mt-9">
-                    <img src={CH} width="168.98" height="55.89" alt="" className="" />
-                    <img src={IOS} width="168.98" height="55.89" alt="" className="" />
+                    <img src={CH} width="168.98" height="55.89" alt="" className="w-1/3 sm:w-1/5 lg:w-1/6 xl:w-1/6" />
+                    <img src={IOS} width="168.98" height="55.89" alt="" className="w-1/3 sm:w-1/5 lg:w-1/6 xl:w-1/6" />
                 </div>
             </div>
-            <div className="md:absolute md:top-0 md:right-0 md:order-1">
-                <img className="h-650" src={bot} alt="" />
-            </div>
+            <img className="top-5 mb-4 sm:absolute sm:w-1/2 sm:h-96 sm:right-0 sm:top-10 sm:order-1 md:h-auto md:w-1/2 lg:w-1/2 lg:h-500 xl:top-0 xl:h-700" src={bot} alt="" />
         </div>
     );
 }
