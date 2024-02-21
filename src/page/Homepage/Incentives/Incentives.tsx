@@ -53,8 +53,8 @@ function Incentives({ }: IncentivesProps): JSX.Element {
             });
     };
     return (
-        <div className='px-24 xl:px-44'>
-            <h1 className="font-sans font-extrabold text-lg2 text-orange-600 text-center">
+        <div className='px-10 sm:px-24 xl:px-44'>
+            <h1 className="font-sans font-extrabold text-2xl sm:text-lg2 text-orange-600 text-center">
                 ƯU ĐÃI ĐĂNG KÝ TRƯỚC
             </h1>
             <div className="flex flex-col lg:flex-row">
@@ -91,32 +91,32 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                 className="block font-semibold text-base leading-6 text-gray-900 mb-2">
                                 Tên người đăng ký
                             </label>
-                            <div className="flex border rounded-full shadow-sm">
-                                <input
-                                    type="text"
-                                    id="fullName"
-                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
-                                    required
-                                    pattern="^[a-zA-ZÀ-ỹ\s]*$"
-                                    value={input.fullName}
-                                    onChange={(e) => setInput({ ...input, fullName: e.target.value })}
-                                />
-                            </div>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                className="block flex-1 w-full border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
+                                required
+                                pattern="^[a-zA-ZÀ-ỹ\s]*$"
+                                value={input.fullName}
+                                onChange={(e) => setInput({ ...input, fullName: e.target.value })}
+                            />
+
                             <label
                                 htmlFor="Email"
                                 className="block font-semibold text-base leading-6 text-gray-900 my-2">
                                 Địa chỉ Email
                             </label>
-                            <div className="flex border rounded-full shadow-sm">
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
-                                    required
-                                    value={input.email}
-                                    onChange={(e) => setInput({ ...input, email: e.target.value })}
-                                />
-                            </div>
+
+                            <input
+                                type="email"
+                                id="email"
+                                className="block w-full flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
+                                required
+                                value={input.email}
+                                onChange={(e) => setInput({ ...input, email: e.target.value })}
+                            />
+
                             <label
                                 htmlFor="Province"
                                 className="block font-semibold text-base leading-6 text-gray-900 my-2">
@@ -170,21 +170,21 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                 className="block font-semibold text-base leading-6 text-gray-900 my-2">
                                 Mã giới thiệu
                             </label>
-                            <div className="flex border rounded-full shadow-sm">
-                                <input
-                                    type="text"
-                                    id="referralCodeOther"
-                                    className="block peer flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
-                                    value={input.referralCodeOther}
-                                    onChange={(e) => setInput({ ...input, referralCodeOther: e.target.value })}
-                                />
-                            </div>
+
+                            <input
+                                type="text"
+                                id="referralCodeOther"
+                                className="block w-full flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
+                                value={input.referralCodeOther}
+                                onChange={(e) => setInput({ ...input, referralCodeOther: e.target.value })}
+                            />
+
                             <div className="relative w-full my-3">
                                 <img src={BigTop} className="absolute top-5 left-3" alt="" />
                                 <img src={SmallTop} className="absolute top-8 left-2" alt="" />
                                 <button
                                     type="submit"
-                                    className={`w-full bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded-full font-sans shadow-md shadow-orange-600 mt-4 text-lg ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    className={`w-full bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded-full font-sans shadow-md shadow-orange-600 mt-4 sm:text-lg ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 >
                                     <div className="flex items-center justify-center">
                                         {submitting ? (

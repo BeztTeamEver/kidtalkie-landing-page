@@ -10,7 +10,7 @@ import Clothes6 from '../../../assets/Clothes/C6.svg';
 interface ChatboxProps { }
 function ChatBox({ }: ChatboxProps): JSX.Element {
     return (
-        <div className="mt-10 mx-24 xl:mx-20">
+        <div className="mt-10 sm:mx-24 xl:mx-20">
             <h1 className="font-sans font-extrabold text-xl md:text-lg2 text-orange-600 text-center">
                 NGƯỜI BẠN ĐỒNG HÀNH CÙNG TRẺ
             </h1>
@@ -21,7 +21,7 @@ function ChatBox({ }: ChatboxProps): JSX.Element {
                             1. Botchat AI trả lời các câu hỏi
                         </p>
                     </div>
-                    <img className="ml-4 mt-4 p-4 w-11/12 " src={Box}></img>
+                    <img className="mt-4 p-3 w-full lg:w-11/12 " src={Box}></img>
                     <div className="grid border w-3/4 sm:w-1/2 md:w-4/5 lg:w-3/4 xl:w-3/4 mr-3 mt-4 p-4 rounded-full shadow-md ml-auto">
                         <p className="truncate font-bold border-r-2 border-solid border-black tracking-widest animate-typing md:text-lg10 lg:text-sm xl:text-lg7">
                             3. Xem lại lịch sử câu hỏi
@@ -38,7 +38,7 @@ function ChatBox({ }: ChatboxProps): JSX.Element {
                             2. Sử dụng giọng nói để hỏi
                         </p>
                     </div>
-                    <div className="grid grid-cols-3 gap-1 mt-6 ml-4 p-4 w-11/12 justify-start">
+                    <div className="grid grid-cols-3 gap-1 mt-6 ml-4 p-4 w-full lg:w-11/12 justify-start">
                         <img className="w-full hover:animate-spinV3" src={Clothes1} alt="" />
                         <img className="w-full hover:animate-spinV3" src={Clothes2} alt="" />
                         <img className="w-full hover:animate-spinV3" src={Clothes3} alt="" />
