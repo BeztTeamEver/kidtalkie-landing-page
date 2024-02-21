@@ -2,7 +2,7 @@ import ChatBox from "../../../assets/chatbox.svg";
 interface ProductProps { }
 function Product({ }: ProductProps): JSX.Element {
     return (
-        <div className="px-24 mt-10 xl:px-36">
+        <div className="px-10 sm:px-24 mt-10 xl:px-36">
             <h1 className="font-sans font-extrabold text-xl md:text-lg2 text-orange-600 text-center mb-14">LIÊN LẠC AN TOÀN, DÀNH RIÊNG CHO GIA ĐÌNH</h1>
             <div className="flex flex-col lg:flex-row justify-between gap-14 items-center">
                 <img className="lg:w-2/5 lg:h-3/4 xl:w-1/2 xl:h-675" src={ChatBox} alt="" />
