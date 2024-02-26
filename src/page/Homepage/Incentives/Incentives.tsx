@@ -19,7 +19,7 @@ function Incentives({ }: IncentivesProps): JSX.Element {
     const [inputValue, setInputValue] = useState('');
     const [selected, setSelected] = useState('');
     const [open, setOpen] = useState(false);
-    const [submitting, setSubmitting] = useState(false);
+    // const [submitting, setSubmitting] = useState(false);
     const [input, setInput] = useState({
         fullName: '',
         email: '',
@@ -35,7 +35,7 @@ function Incentives({ }: IncentivesProps): JSX.Element {
     }, []);
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setSubmitting(true);
+        // setSubmitting(true);
         RegisterAPI.register(input.fullName, input.email, selected, input.referralCodeOther)
             .then((res) => {
                 console.log(res);
@@ -45,15 +45,27 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                     referralCodeOther: '',
                 });
                 setSelected('');
-                toast.success(<div className='w-full font-semibold text-base text-orange-600 p-1'>Bạn đã đăng ký thành công.<br /><span className='font-extralight text-xs text-black'>Hệ thống đã ghi nhận thông tin của bạn. Vui lòng kiểm tra email để nhận mã giới thiệu và các ưu đãi từ KidTalkie</span></div>);
+                toast.success(
+                    <div className="w-full font-semibold text-base text-orange-600 p-1">
+                        Bạn đã đăng ký thành công.
+                        <br />
+                        <span className="font-extralight text-xs text-black">
+                            Hệ thống đã ghi nhận thông tin của bạn. Vui lòng kiểm tra email để nhận mã giới thiệu
+                            và các ưu đãi từ KidTalkie
+                        </span>
+                    </div>,
+                );
             })
-            .catch((error) => { console.log(error); toast.error("Đăng ký không thành công, vui lòng kiểm tra lại!") })
+            .catch((error) => {
+                console.log(error);
+                toast.error('Đăng ký không thành công, vui lòng kiểm tra lại!');
+            })
             .finally(() => {
-                setSubmitting(false);
+                // setSubmitting(false);
             });
     };
     return (
-        <div className='px-10 sm:px-24 xl:px-44'>
+        <div className="px-10 sm:px-24 xl:px-44">
             <h1 className="font-sans font-extrabold text-2xl sm:text-lg2 text-orange-600 text-center">
                 ƯU ĐÃI ĐĂNG KÝ TRƯỚC
             </h1>
@@ -100,6 +112,7 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                 pattern="^[a-zA-ZÀ-ỹ\s]*$"
                                 value={input.fullName}
                                 onChange={(e) => setInput({ ...input, fullName: e.target.value })}
+                                readOnly
                             />
 
                             <label
@@ -115,6 +128,7 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                 required
                                 value={input.email}
                                 onChange={(e) => setInput({ ...input, email: e.target.value })}
+                                readOnly
                             />
 
                             <label
@@ -144,25 +158,28 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                             value={inputValue}
                                             onChange={(e) => setInputValue(e.target.value)}
                                             className="placeholder:text-gray-700 bg-gray-100 p-2 outline-none w-full"
+                                            readOnly
                                         />
                                     </div>
-                                    {Array.isArray(provinces) && provinces.length > 0 && provinces.map((province) => (
-                                        <li
-                                            key={province?.name}
-                                            className={`p-2 text-base hover:bg-primary-100 hover:text-white ${province?.name?.toLowerCase().includes(inputValue.toLowerCase())
-                                                ? 'block'
-                                                : 'hidden'
-                                                }`}
-                                            onClick={() => {
-                                                if (province?.name !== selected) {
-                                                    setSelected(province?.name);
-                                                    setOpen(false);
-                                                    setInputValue('');
-                                                }
-                                            }}>
-                                            {province?.name}
-                                        </li>
-                                    ))}
+                                    {Array.isArray(provinces) &&
+                                        provinces.length > 0 &&
+                                        provinces.map((province) => (
+                                            <li
+                                                key={province?.name}
+                                                className={`p-2 text-base hover:bg-primary-100 hover:text-white ${province?.name?.toLowerCase().includes(inputValue.toLowerCase())
+                                                    ? 'block'
+                                                    : 'hidden'
+                                                    }`}
+                                                onClick={() => {
+                                                    if (province?.name !== selected) {
+                                                        setSelected(province?.name);
+                                                        setOpen(false);
+                                                        setInputValue('');
+                                                    }
+                                                }}>
+                                                {province?.name}
+                                            </li>
+                                        ))}
                                 </ul>
                             </div>
                             <label
@@ -177,12 +194,13 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                 className="block w-full flex-1 border text-base rounded-full shadow-sm bg-transparent px-5 py-3"
                                 value={input.referralCodeOther}
                                 onChange={(e) => setInput({ ...input, referralCodeOther: e.target.value })}
+                                readOnly
                             />
 
                             <div className="relative w-full my-3">
                                 <img src={BigTop} className="absolute top-5 left-3" alt="" />
                                 <img src={SmallTop} className="absolute top-8 left-2" alt="" />
-                                <button
+                                {/* <button
                                     type="submit"
                                     className={`w-full bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded-full font-sans shadow-md shadow-orange-600 mt-4 sm:text-lg ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 >
@@ -199,9 +217,16 @@ function Incentives({ }: IncentivesProps): JSX.Element {
                                             'Nhanh tay đăng ký trước ngay'
                                         )}
                                     </div>
+                                </button> */}
+                                <button
+                                    type="submit"
+                                    className={`w-full bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded-full font-sans shadow-md shadow-orange-600 mt-4 sm:text-lg pointer-events-none opacity-80`}
+                                    disabled
+                                >
+                                    Chương trình đăng ký trước đã kết thúc
                                 </button>
-                                <img src={BigBot} className="absolute top-8 right-1" alt="" />
-                                <img src={SmallBot} className="absolute top-12 right-4" alt="" />
+                                <img src={BigBot} className="absolute top-8 right-1 opacity-80" alt="" />
+                                <img src={SmallBot} className="absolute top-12 right-4 opacity-80" alt="" />
                             </div>
                         </div>
                     </form>
