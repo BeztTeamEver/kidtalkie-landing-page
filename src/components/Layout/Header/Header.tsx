@@ -14,7 +14,9 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
   return (
     <header className="relative z-20 bg-white" style={{ background: 'transparent' }}>
       <nav
@@ -75,15 +77,15 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
           <div className="mt-6 space-y-2">
             {navigation.map((item, index) => (
-              <a
-                href={item.href}
+              <Link
+                to={item.href} onClick={closeMobileMenu}
                 key={index}
                 className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="py-6">
-              <Link to="/incentives" className="flex items-center justify-center bg-orange-500 hover:bg-orange-300 text-white font-bold py-2 px-4 rounded-full font-sans leading-3">
+              <Link to="/incentives" onClick={closeMobileMenu} className="flex items-center justify-center bg-orange-500 hover:bg-orange-300 text-white font-bold py-2 px-4 rounded-full font-sans leading-3">
                 <IconSparkles className="size-6" />
                 <span className="ml-2">Đăng ký trước ngay</span>
                 <IconSparkles className="size-6 ml-2" />

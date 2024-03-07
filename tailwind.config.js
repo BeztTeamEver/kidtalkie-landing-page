@@ -109,7 +109,7 @@ export default {
 				spinV2: 'spinV2 3s linear infinite',
 				spinV3: 'spinV3 1s linear infinite',
 				typing:
-					'typing 5s steps(3000, end) infinite, blinkCaret 1.5s step-end infinite, pause 4000ms infinite',
+					'typing 5s steps(3000, end) infinite, blinkCaret 1.5s step-end infinite, pause 5000ms infinite',
 				u: 'bounceV2 1s infinite',
 				p: 'bounceV2 2.5s infinite',
 				d: 'bounceV2 3.5s infinite',
@@ -139,7 +139,7 @@ export default {
 				},
 				pause: {
 					'0%': { width: '0' },
-					'100%': { width: '100%' },
+					'100%': { width: '101%' },
 				},
 				bounceV2: {
 					'0%, 100%': {

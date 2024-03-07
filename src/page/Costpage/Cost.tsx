@@ -11,10 +11,10 @@ export default function Cost({ }: CostProps): JSX.Element {
                 </span>
                 <IconNorthStar size={50} className="text-primary-600" />
             </div>
-            <div className="flex flew-row lg:flex-row gap-10 p-4">
-                <div className="flex flex-col border rounded-lg1 basis-1/3 p-10 text-center items-center shadow-2xl lg:w-1/3">
+            <div className="flex flew-row gap-10 p-4 flex-wrap lg:flex-nowrap justify-center">
+                <div className="flex flex-col border rounded-lg1 p-10 text-center shadow-2xl w-1/2 lg:w-1/3">
                     <h1 className="font-inter font-semibold text-lg1 text-neutral-700">Gói trải nghiệm</h1>
-                    <h1 className="font-inter font-semibold text-lg9 text-neutral-800 mt-4">0đ</h1>
+                    <h1 className="font-inter font-semibold text-3xl sm:text-lg9 text-neutral-800 mt-4">0đ</h1>
                     <p className="font-inter font-normal italic text-lg text-neutral-600">
                         1 tài khoản gia đình/7 ngày
                     </p>
@@ -25,9 +25,9 @@ export default function Cost({ }: CostProps): JSX.Element {
                         Từ đó yên tâm cho trẻ vui chơi và sáng tạo cùng KidTalkie hơn ;)
                     </p>
                 </div>
-                <div className="flex flex-col border rounded-lg1 basis-1/3 p-10 text-center items-center shadow-2xl lg:w-1/3">
+                <div className="flex flex-col border rounded-lg1 p-10  text-center shadow-2xl w-1/2 lg:w-1/3">
                     <h1 className="font-inter font-semibold text-lg1 text-neutral-700">Gói cơ bản</h1>
-                    <h1 className="font-inter font-semibold text-lg9 text-neutral-800 mt-4">
+                    <h1 className="font-inter font-semibold text-3xl sm:text-lg9 text-neutral-800 mt-4">
                         140.000<sup>vnđ</sup>
                     </h1>
                     <p className="font-inter font-normal italic text-lg text-neutral-600">
@@ -38,9 +38,9 @@ export default function Cost({ }: CostProps): JSX.Element {
                         gói này phụ huynh không thể dõi theo các hoạt động của con một cách toàn diện
                     </p>
                 </div>
-                <div className="flex flex-col border rounded-lg1 basis-1/3 p-10 text-center items-center shadow-2xl lg:w-1/3">
+                <div className="flex flex-col border rounded-lg1 p-10 text-center shadow-2xl w-1/2 lg:w-1/3">
                     <h1 className="font-inter font-semibold text-lg1 text-neutral-700">Gói toàn diện</h1>
-                    <h1 className="font-inter font-semibold text-lg9 text-neutral-800 mt-4">
+                    <h1 className="font-inter font-semibold text-3xl sm:text-lg9 text-neutral-800 mt-4">
                         320.000<sup>vnđ</sup>
                     </h1>
                     <p className="font-inter font-normal italic text-lg text-neutral-600">
@@ -52,7 +52,7 @@ export default function Cost({ }: CostProps): JSX.Element {
                     </p>
                 </div>
             </div>
-            <img className="p-16" src={TableCost} />
+            <img className="p-3 sm:p-16" src={TableCost} />
         </div>
     );
 }
