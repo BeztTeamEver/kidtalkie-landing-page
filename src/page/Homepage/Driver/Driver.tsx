@@ -5,6 +5,15 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 interface DriverProps { }
 const Driver: React.FC<DriverProps> = () => {
+    const getMarginLeft = () => {
+        if (window.innerWidth > 768) {
+            return 100;
+        } else if (window.innerWidth > 480) {
+            return -80;
+        } else {
+            return -40;
+        }
+    };
     return (
         <Swiper
             spaceBetween={100}
@@ -21,10 +30,10 @@ const Driver: React.FC<DriverProps> = () => {
             {Array(30)
                 .fill(0)
                 .map((_, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="flex text-2xl font-bold text-white py-6 justify-center">
-                            <img className="h-8 w-auto" src={Logo} alt="" />
-                            <span className="flex items-center ml-2 text-white font-sans font-extrabold text-lg1 justify-center">
+                    <SwiperSlide key={index} style={{ marginLeft: getMarginLeft() }}>
+                        <div className="flex text-2xl font-bold text-white py-6 justify-center w-fit">
+                            <img className="h-8" src={Logo} alt="" />
+                            <span className="flex items-center ml-2 text-white font-sans font-extrabold text-base sm:text-lg1 justify-center">
                                 KidTalkie
                             </span>
                         </div>
